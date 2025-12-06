@@ -1,0 +1,78 @@
+title: Start
+---
+*You wake up after a long nights rest*
+*You remember there was something you had to do, just not what*
+*you see a note on the table *
+*The note reads: reminder to self: go herb plucking tomorrow*
+*you decide to head out and go pick some herbs on the field to the left of your house*
+
+<<wait  10>>
+
+*You see a comet falling down the sky and decide to check it out*
+*the comet is to the right of the flower field*
+
+<<wait  15>>
+
+*you notice a humanoid alien standing near the comet, you decide to go talk to them*
+// *your sight recovers after the blast*
+// *you look around and see your home has been destroyed*
+// *you spot a robonoid alien* 
+// Walk up to the Alien and Ask what happened.
+<<declare $quest = "find Alien">>
+===
+
+title: TalkToAlien
+---
+<<if $quest == "find Alien">>
+    GDKKN GTLZM
+    *Rebooting Language system*
+    Sorry, Hello Human!
+    My ship seems to have crashed near you, i apologise for the mess it has caused.
+    It had a leak in the fluecent lucid, some of it may have spilled into the nearby area.
+    *Scanning for injuries*
+    You seem to be unharmed, my system does pickup something quite unusual.
+    It seems like the leakage had some effect on you, can you try and focus on that stone over there?
+    Imagine it floating, then grab the ship's blueprint tabloid from underneath it.
+<<set $quest to "grab blueprint">>
+
+<<elseif $quest == "grab blueprint">>
+    
+    Welcome back human, did you grab my blueprint from underneath the stone?
+
+    <<if has_item("Player", "bluePrint")>>
+        Thank you human, now we can find out what we need to repair my ship.
+        My database shows that some ship parts landed in the nearby area.
+        Can you grab those while I work on getting the fluecent lucid tank working again?
+        The parts that you need are on the blueprint, I have circled them for you.
+        <<set $quest to "find clinkClank">>
+        
+
+    <<else>>
+        I need the blueprint from underneath that stone right there.
+    <<endif>>
+
+<<elseif $quest == "find clinkClank">>
+    
+    Did you find the missing part I asked you to find?
+
+    <<if has_item("player", "clinkClank")>>
+
+    Good job on finding the first part! I will repair my ship further.
+    can you find this part aswell? I circled it on the blueprint again.
+    
+    <<set $quest to "find desicledemo">>
+
+    <<else>>
+    I'm almost finished fixing the fluecent lucid tank.
+    Please grab the remaining parts so that we can put my ship back together.
+
+    <<endif>>    
+<<endif>>
+
+
+    // Good job human! I will fix my ship now.
+    // I suggest you cleanup the place a bit using your newfound powers.
+    // again my apologies for causing this mess.
+===
+
+

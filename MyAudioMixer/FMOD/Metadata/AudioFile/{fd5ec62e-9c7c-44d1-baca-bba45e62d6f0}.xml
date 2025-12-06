@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{fd5ec62e-9c7c-44d1-baca-bba45e62d6f0}">
+		<property name="assetPath">
+			<value>WaterFall.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>42</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fd52caf0-ecbe-4676-971c-f7fd0351ae6a}</destination>
+		</relationship>
+	</object>
+</objects>
