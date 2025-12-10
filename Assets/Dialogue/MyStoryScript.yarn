@@ -70,9 +70,15 @@ title: TalkToAlien
 <<endif>>
 
 
+
+
+
     // Good job human! I will fix my ship now.
     // I suggest you cleanup the place a bit using your newfound powers.
     // again my apologies for causing this mess.
 ===
+title: Tree
+---
+<<teleport "Player" "BeginSpawn">>
 
-
+===
