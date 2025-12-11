@@ -6,14 +6,18 @@ title: Start
 *The note reads: reminder to self: go herb plucking tomorrow*
 *you decide to head out and go pick some herbs on the field to the left of your house*
 
-<<wait  10>>
+===
+title: CometCrash
+---
 
 *You see a comet falling down the sky and decide to check it out*
 *the comet is to the right of the flower field*
 
-<<wait  15>>
+===
+title: Alien
+---
 
-*you notice a humanoid alien standing near the comet, you decide to go talk to them*
+*you notice an alien standing near the comet, you decide to go talk to them*
 // *your sight recovers after the blast*
 // *you look around and see your home has been destroyed*
 // *you spot a robonoid alien* 

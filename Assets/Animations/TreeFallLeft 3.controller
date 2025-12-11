@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: tree_normal (28)
+  m_Name: TreeFallLeft 3
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: TreeFall
@@ -125,7 +125,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 903634250b6265f42921c9e07010596e, type: 2}
+  m_Motion: {fileID: 7400000, guid: c71107510b523cf43a217db35d9c378e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
