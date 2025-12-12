@@ -41,7 +41,7 @@ title: TalkToAlien
 
 <<elseif $quest == "grab blueprint">>
     
-    Welcome back human, did you grab my blueprint from underneath the stone?
+    Alien: Welcome back human, did you grab my blueprint from underneath the stone?
 
     <<if has_item("Player", "bluePrint")>>
         Thank you human, now we can find out what we need to repair my ship.
@@ -86,23 +86,27 @@ title: TalkToFox
 Please don't hurt me
 *You realize you can hear the fox tlaking somehow*
 -> Be kind to the fox
-<<jump FoxKind>>
+    <<jump FoxKind>>
 -> Leave the fox
-<<stop>>
--> Be mean to the fox
-<<jump FoxMean>>
-
+    Narrator: you leave the fox alone in the cave
+    <<stop>>
+-> Be mean to the 
+    Narrator: You are mean to the fox
+    //play an animation of the fox running away while you hear cries
 ===
+
 
 title: FoxKind
 ---
-I won't hurt you no worries
-===
-
-title: FoxMean
----
-*mean grumbles*
-the fox walks away
+You: I won't hurt you no worries
+    Fox: Wait- you can hear me?
+    You: It appears so
+    You: What is a small fox like you even doing in a cave?
+    Fox: I got scared from the loud noise outside so i hid in this cave
+    Fox: Can i go with you? You seem like a nice person
+    ->Ofcourse!
+        Narrator: The fox will now follow you!
+    ->No sorry
 ===
 title: Tree
 ---
