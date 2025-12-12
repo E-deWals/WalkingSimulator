@@ -48,38 +48,61 @@ title: TalkToAlien
         My database shows that some ship parts landed in the nearby area.
         Can you grab those while I work on getting the fluecent lucid tank working again?
         The parts that you need are on the blueprint, I have circled them for you.
-        <<set $quest to "find clinkClank">>
+        <<set $quest to "find Items">>
         
 
     <<else>>
         I need the blueprint from underneath that stone right there.
     <<endif>>
 
-<<elseif $quest == "find clinkClank">>
+<<elseif $quest == "find Items">>
     
     Did you find the missing part I asked you to find?
 
-    <<if has_item("player", "clinkClank")>>
-
+    <<if has_item("Player", "clinkClank")>>
+// if player has only one item
     Good job on finding the first part! I will repair my ship further.
     can you find this part aswell? I circled it on the blueprint again.
-    
-    <<set $quest to "find desicledemo">>
 
     <<else>>
     I'm almost finished fixing the fluecent lucid tank.
     Please grab the remaining parts so that we can put my ship back together.
+    
+    <<endif>>
+        <<if has_item ("Player", "desicleDemo")>>
+    Thank you for helping me find the parts for my ship human! I will now be off to destroy humanity!
+    I hope you have a nice day, since it will be your last
+    
 
-    <<endif>>    
+    <<else>>
+    I'm almost finished fixing the fluecent lucid tank.
+    Please grab the remaining parts so that we can put my ship back together.
+<<endif>>
 <<endif>>
 
+===
+title: TalkToFox
+---
+Please don't hurt me
+*You realize you can hear the fox tlaking somehow*
+-> Be kind to the fox
+<<jump FoxKind>>
+-> Leave the fox
+<<stop>>
+-> Be mean to the fox
+<<jump FoxMean>>
 
+===
 
+title: FoxKind
+---
+I won't hurt you no worries
+===
 
-
-    // Good job human! I will fix my ship now.
-    // I suggest you cleanup the place a bit using your newfound powers.
-    // again my apologies for causing this mess.
+title: FoxMean
+---
+*mean grumbles*
+the fox walks away
 ===
 title: Tree
 ---
