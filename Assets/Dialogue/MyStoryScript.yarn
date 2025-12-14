@@ -6,11 +6,13 @@ title: Start
 Narrator: You wake up after a long nights rest
 Narrator: You remember there was something you had to do, just not what
 Narrator: you see a note on the table 
+
+===
+title: note
+---
 The note: reminder to self: go herb plucking tomorrow
 Narrator: you decide to head out and go pick some herbs on the field to the left of your house
-
 <<set $quest = "Go to the flower field">>
----
 ===
 title: CometCrash
 ---
@@ -47,7 +49,7 @@ title: TalkToAlien
         Alien: Thank you human, now we can find out what we need to repair my ship.
         Alien: My database shows that some ship parts landed in the nearby area.
         Alien: Can you grab those while I work on getting the fluecent lucid tank working again?
-        Alien: I will project the way to the objects into your head so that you know where to go.
+        Alien: Also Human, the parts of my ship will look like what you call Crystals
         <<set $quest to "find Parts">>
         <<set $Items = "2/2 remaining">>
         
@@ -73,7 +75,11 @@ title: TalkToAlien
 <<elseif $quest == "Return to Alien">>    
 
     <<if has_item ("Player", "desicleDemo")>>
-    Alien: Thank you for helping me find the parts for my ship human! I will now be off to destroy humanity!
+    
+    Alien: Thank you for helping me find the parts for my ship human!
+    <<play_animation "CuteAlien" "AlienBad" false>>
+    <<play_animation "Asteroid_5" "MadRock" false>>
+    Alien: I will now be off to destroy humanity!
     Alien: I hope you have a nice day, since it will be your last
 
     Narrator: Congratulations player, this is the end of the game
@@ -98,7 +104,9 @@ title: TalkToAlien
     Fox: They are kind and amazing and I won' t let you get away with this
 
     Narrator: You see the Fox attacking the Alien
+    <<play_animation "CuteAlien" "AlienPoof" false>>
     Narrator: the Fox somehow beat the Alien and saved the world
+
     Narrator: Congratulations player
 
     <<set $quest = "End of game, congratulations good ending unlocked">>
