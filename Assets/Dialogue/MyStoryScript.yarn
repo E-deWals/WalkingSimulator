@@ -1,83 +1,108 @@
 title: Start
 ---
-*You wake up after a long nights rest*
-*You remember there was something you had to do, just not what*
-*you see a note on the table *
-*The note reads: reminder to self: go herb plucking tomorrow*
-*you decide to head out and go pick some herbs on the field to the left of your house*
+<<declare $quest = "Read note">>
+<<declare $Items = "">>
 
+Narrator: You wake up after a long nights rest
+Narrator: You remember there was something you had to do, just not what
+Narrator: you see a note on the table 
+The note: reminder to self: go herb plucking tomorrow
+Narrator: you decide to head out and go pick some herbs on the field to the left of your house
+
+<<set $quest = "Go to the flower field">>
+---
 ===
 title: CometCrash
 ---
 
-*You see a comet falling down the sky and decide to check it out*
-*the comet is to the right of the flower field*
-
+Narrator: You see a comet falling down the sky and decide to check it out
+Narrator: the comet is to the right of the flower field
+<<set $quest = "Check out the crash">>
 ===
-title: Alien
+
+title: seeAlien
 ---
-
-*you notice an alien standing near the comet, you decide to go talk to them*
-// *your sight recovers after the blast*
-// *you look around and see your home has been destroyed*
-// *you spot a robonoid alien* 
-// Walk up to the Alien and Ask what happened.
-<<declare $quest = "find Alien">>
+<<set $quest = "Talk to Alien">>
 ===
-
 title: TalkToAlien
 ---
-<<if $quest == "find Alien">>
-    GDKKN GTLZM
-    *Rebooting Language system*
-    Sorry, Hello Human!
-    My ship seems to have crashed near you, i apologise for the mess it has caused.
-    It had a leak in the fluecent lucid, some of it may have spilled into the nearby area.
-    *Scanning for injuries*
-    You seem to be unharmed, my system does pickup something quite unusual.
-    It seems like the leakage had some effect on you, can you try and focus on that stone over there?
-    Imagine it floating, then grab the ship's blueprint tabloid from underneath it.
+<<if $quest == "Talk to Alien">>
+    Alien: GDKKN GTLZM
+    Alien: *Rebooting Language system*
+    Alien: Sorry, Hello Human!
+    Alien: My ship seems to have crashed near you, i apologise for the mess it has caused.
+    Alien: It had a leak in the fluecent lucid, some of it may have spilled into the nearby area.
+    Alien: *Scanning for injuries*
+    Alien: You seem to be unharmed, my system does pickup something quite unusual.
+    Alien: It seems like the leakage had some effect on you, can you try and focus on that stone over there?
+    Alien: Imagine it floating, then grab the ship's blueprint tabloid from underneath it.
 <<set $quest to "grab blueprint">>
 
 <<elseif $quest == "grab blueprint">>
     
     Alien: Welcome back human, did you grab my blueprint from underneath the stone?
 
+<<elseif $quest == "Report back to Alien">>
     <<if has_item("Player", "bluePrint")>>
-        Thank you human, now we can find out what we need to repair my ship.
-        My database shows that some ship parts landed in the nearby area.
-        Can you grab those while I work on getting the fluecent lucid tank working again?
-        The parts that you need are on the blueprint, I have circled them for you.
-        <<set $quest to "find Items">>
+        Alien: Thank you human, now we can find out what we need to repair my ship.
+        Alien: My database shows that some ship parts landed in the nearby area.
+        Alien: Can you grab those while I work on getting the fluecent lucid tank working again?
+        Alien: I will project the way to the objects into your head so that you know where to go.
+        <<set $quest to "find Parts">>
+        <<set $Items = "2/2 remaining">>
         
 
     <<else>>
-        I need the blueprint from underneath that stone right there.
+        Alien: I need the blueprint from underneath that stone right there.
     <<endif>>
 
-<<elseif $quest == "find Items">>
+<<elseif $quest == "find Parts">>
     
-    Did you find the missing part I asked you to find?
+    Alien: Did you find the missing parts I asked you to find?
 
     <<if has_item("Player", "clinkClank")>>
-// if player has only one item
-    Good job on finding the first part! I will repair my ship further.
-    can you find this part aswell? I circled it on the blueprint again.
+    Alien: Good job on finding the first part! I will repair my ship further.
+    Alien: can you find this part aswell? I circled it on the blueprint again.
 
     <<else>>
-    I'm almost finished fixing the fluecent lucid tank.
-    Please grab the remaining parts so that we can put my ship back together.
-    
+    Alien: I'm almost finished fixing the fluecent lucid tank.
+    Alien: Please grab the remaining parts so that we can put my ship back together.
+
     <<endif>>
-        <<if has_item ("Player", "desicleDemo")>>
-    Thank you for helping me find the parts for my ship human! I will now be off to destroy humanity!
-    I hope you have a nice day, since it will be your last
-    
 
+<<elseif $quest == "Return to Alien">>    
+
+    <<if has_item ("Player", "desicleDemo")>>
+    Alien: Thank you for helping me find the parts for my ship human! I will now be off to destroy humanity!
+    Alien: I hope you have a nice day, since it will be your last
+
+    Narrator: Congratulations player, this is the end of the game
+    Narrator: Sadly for you, this is the bad ending
+    Narrator: Feel free to play again and try to find the good ending :D
+
+    <<set $quest = "End of game,  Bad Ending unlocked">>
+    
     <<else>>
-    I'm almost finished fixing the fluecent lucid tank.
-    Please grab the remaining parts so that we can put my ship back together.
+    Alien: I'm almost finished fixing the fluecent lucid tank.
+    Alien: Please grab the remaining parts so that we can put my ship back together.
+
+    
 <<endif>>
+
+<<elseif $quest == "Return to Alien with Fox">>
+
+    Alien: Thank you for helping me find the parts for my ship human! I will now be off to destroy humanity!
+    Alien: I hope you have a nice day, since it will be your last
+
+    Fox: No that' s my human
+    Fox: They are kind and amazing and I won' t let you get away with this
+
+    Narrator: You see the Fox attacking the Alien
+    Narrator: the Fox somehow beat the Alien and saved the world
+    Narrator: Congratulations player
+
+    <<set $quest = "End of game, congratulations good ending unlocked">>
+
 <<endif>>
 
 ===
@@ -90,8 +115,10 @@ Please don't hurt me
 -> Leave the fox
     Narrator: you leave the fox alone in the cave
     <<stop>>
--> Be mean to the 
+-> Be mean to the fox
     Narrator: You are mean to the fox
+    Narrator: You see the fox running away as you feel like a terrible human being
+    
     //play an animation of the fox running away while you hear cries
 ===
 
@@ -100,16 +127,49 @@ title: FoxKind
 ---
 You: I won't hurt you no worries
     Fox: Wait- you can hear me?
-    You: It appears so
+    You: It appears so..?
     You: What is a small fox like you even doing in a cave?
-    Fox: I got scared from the loud noise outside so i hid in this cave
-    Fox: Can i go with you? You seem like a nice person
+    Fox: I got scared from the loud noise outside so i hid in this cave.
+    Fox: Can i go with you? You seem like a nice person!
     ->Ofcourse!
         Narrator: The fox will now follow you!
-    ->No sorry
+        <<if has_item ("Player", "clinkClank")>>
+            <<set $quest = "Find last part with Fox">>
+        <<elseif has_item ("Player", "desicleDemo")>>
+            <<set $quest = "Return to Alien With Fox">>
+        <<else>>
+            <<set $quest = "Find parts with fox">>
+        <<endif>>  
+    ->No.
+        Narrator: The fox stays in the cave, scared and confused thinking you don't like him.
 ===
+
+//Stupid stuff that makes my game work :D
 title: Tree
 ---
 <<teleport "Player" "BeginSpawn">>
+
+===
+
+
+title: bluePrint
+---
+<<set $quest = "Report back to Alien">>
+===
+
+title: clinkClank
+---
+<<set $Items = "1/2 remaining">>
+===
+
+title: desicleDemo
+---
+<<set $Items = "">>
+
+<<if $quest == "find Parts">>
+    <<set $quest = "Return to Alien">>
+<<else>>
+    <<set $quest = "Return to Alien with Fox">>
+<<endif>>
 
 ===
