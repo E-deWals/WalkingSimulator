@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 3977912476451997583, guid: 7c75d5d0d0c8c684998762aa4dcbcec6,
         type: 3}
       propertyPath: m_Name
-      value: Interactable Rock Tall 1 Variant
+      value: Interactable Rock Tall Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4188544476912883469, guid: 7c75d5d0d0c8c684998762aa4dcbcec6,
         type: 3}
