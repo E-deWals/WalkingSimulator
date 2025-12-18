@@ -129,8 +129,8 @@ title: TalkToAlien
 ===
 title: TalkToFox
 ---
-Please don't hurt me
-*You realize you can hear the fox tlaking somehow*
+Fox: Please don't hurt me
+Narrator: You realize you can hear the fox talking somehow
 -> Be kind to the fox
     <<jump FoxKind>>
 -> Leave the fox
@@ -152,7 +152,7 @@ You: I won't hurt you no worries
     You: What is a small fox like you even doing in a cave?
     Fox: I got scared from the loud noise outside so i hid in this cave.
     Fox: Can i go with you? You seem like a nice person!
-    ->Ofcourse!
+    ->Of course!
         Narrator: The fox will now follow you!
         <<if has_item ("Player", "clinkClank")>>
             <<set $quest = "Find last part with Fox">>
@@ -168,6 +168,11 @@ You: I won't hurt you no worries
 title: wrongStone
 ---
 Alien: That is my ship human, please do not try to move it
+
+<<if $quest == "End of game, congratulations good ending unlocked">>
+Narrator: The alien is dead, the ship is now abandoned.
+Narrator: Sadly you have no idea how to use the alien technology.
+<<endif>>
 ===
 
 //Stupid stuff that makes my game work :D

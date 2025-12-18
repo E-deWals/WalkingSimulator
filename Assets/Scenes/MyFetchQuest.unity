@@ -30709,6 +30709,7 @@ GameObject:
   - component: {fileID: 532386136}
   - component: {fileID: 532386138}
   - component: {fileID: 532386139}
+  - component: {fileID: 532386140}
   m_Layer: 0
   m_Name: CrashAudio
   m_TagString: Untagged
@@ -30750,8 +30751,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 40.999996, y: 7.1277275, z: 67.842804}
-  m_Center: {x: 15.499998, y: 1.4361362, z: 1.9214058}
+  m_Size: {x: 40.999996, y: 7.1277275, z: 52.842804}
+  m_Center: {x: 15.499998, y: 1.4361362, z: -5.578594}
 --- !u!114 &532386139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30765,6 +30766,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetObject: {fileID: 610895623}
+--- !u!114 &532386140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532386135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ddaf7983fe414f73941d1ba82cd8b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canRepeat: 0
+  shouldActivateOnCollision: 1
+  canBeActivated: 1
+  targetEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &532410489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 738694336361655293, guid: a178e3ddd4a467d4090e2b4a7a5e394f,
@@ -44864,6 +44895,7 @@ Transform:
   - {fileID: 1521015141}
   - {fileID: 1418056344}
   - {fileID: 1796851500}
+  - {fileID: 1073839964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &768873790
@@ -59641,6 +59673,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1072157240}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1073839963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1073839964}
+  - component: {fileID: 1073839965}
+  - component: {fileID: 1073839966}
+  m_Layer: 0
+  m_Name: CrashEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1073839964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073839963}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 62.200005, y: 2.1100006, z: -68.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 767763953}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1073839965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073839963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ddaf7983fe414f73941d1ba82cd8b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canRepeat: 0
+  shouldActivateOnCollision: 1
+  canBeActivated: 1
+  targetEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 610895627}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ShipFall
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!65 &1073839966
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073839963}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 1
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 40.999996, y: 7.1277275, z: 52.842804}
+  m_Center: {x: 15.499998, y: 1.4361362, z: -5.578594}
 --- !u!1 &1073930069
 GameObject:
   m_ObjectHideFlags: 0
@@ -85229,12 +85345,12 @@ PrefabInstance:
     - target: {fileID: 8880819237238517064, guid: 543f85c367b24464098124fcc11a6955,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -154.76624
+      value: 59.089973
       objectReference: {fileID: 0}
     - target: {fileID: 8880819237238517064, guid: 543f85c367b24464098124fcc11a6955,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.046481
+      value: 54.046482
       objectReference: {fileID: 0}
     - target: {fileID: 8880819237238517064, guid: 543f85c367b24464098124fcc11a6955,
         type: 3}
