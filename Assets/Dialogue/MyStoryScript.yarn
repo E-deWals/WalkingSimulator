@@ -10,8 +10,8 @@ Narrator: you see a note on the table
 ===
 title: note
 ---
-The note: reminder to self: go herb plucking tomorrow
-Narrator: you decide to head out and go pick some herbs on the field to the left of your house
+The note: reminder to self: go flower picking tomorrow
+Narrator: you decide to head out and go pick some flowers on the field to the left of your house
 <<set $quest = "Go to the flower field">>
 ===
 title: CometCrash
@@ -152,14 +152,10 @@ You: I won't hurt you no worries
         Narrator: The fox stays in the cave, scared and confused thinking you don't like him.
 ===
 
-// title: wrongStone
-// ---
-// Alien: That is my ship human, please do not try to move it
-
-// <<if $quest == "find bluePrint">>
-// Alien: I was talking about the actual stone behind me
-// <<endif>>
-// ===
+title: wrongStone
+---
+Alien: That is my ship human, please do not try to move it
+===
 
 //Stupid stuff that makes my game work :D
 title: Tree
@@ -177,10 +173,12 @@ title: bluePrint
 title: clinkClank
 ---
 <<set $Items = "1/2 remaining">>
+<<set_enabled_in_unity "ClinkClankSound" true>>
 ===
 
 title: desicleDemo
 ---
+<<set_enabled_in_unity "DesicleDemoSound" true>>
 <<set $Items = "">>
 
 <<if $quest == "find Parts">>
