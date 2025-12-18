@@ -4,13 +4,13 @@ title: Start
 <<declare $Items = "">>
 
 Narrator: You wake up after a long nights rest
-Narrator: You remember there was something you had to do, just not what
+Narrator: You remember there was something you had to do. Just not what
 Narrator: you see a note on the table 
 
 ===
 title: note
 ---
-The note: reminder to self: go flower picking tomorrow
+The note: reminder to self: go pick flowers tomorrow
 Narrator: you decide to head out and go pick some flowers on the field to the left of your house
 <<set $quest = "Go to the flower field">>
 ===
@@ -77,8 +77,11 @@ title: TalkToAlien
     <<if has_item ("Player", "desicleDemo")>>
     
     Alien: Thank you for helping me find the parts for my ship human!
+    <<set_enabled_in_unity "GameMusic" false>> 
+    <<set_enabled_in_unity "EnemySound" true>>
     <<play_animation "CuteAlien" "AlienBad" false>>
-    <<play_animation "Asteroid_5" "MadRock" false>>
+    <<play_animation "Crashed Ship" "MadRock" false>>
+    
     Alien: I will now be off to destroy humanity!
     Alien: I hope you have a nice day, since it will be your last
 
@@ -97,15 +100,25 @@ title: TalkToAlien
 
 <<elseif $quest == "Return to Alien with Fox">>
 
-    Alien: Thank you for helping me find the parts for my ship human! I will now be off to destroy humanity!
+    Alien: Thank you for helping me find the parts for my ship human!
+
+    <<set_enabled_in_unity "GameMusic" false>> 
+    <<set_enabled_in_unity "EnemySound" true>>
+    <<play_animation "CuteAlien" "AlienBad" false>>
+    <<play_animation "Crashed Ship" "MadRock" false>>
+    
+    Alien: I will now be off to destroy humanity!
     Alien: I hope you have a nice day, since it will be your last
 
-    Fox: No that' s my human
-    Fox: They are kind and amazing and I won' t let you get away with this
+    Fox: No! that' s MY human.
+    Fox: They are kind and amazing.
+    Fox: I won' t let you get away with this!
 
     Narrator: You see the Fox attacking the Alien
-    <<play_animation "CuteAlien" "AlienPoof" false>>
     Narrator: the Fox somehow beat the Alien and saved the world
+    <<play_animation "CuteAlien" "AlienPoof" false>>
+    <<set_enabled_in_unity "GameMusic" true>>
+    <<set_enabled_in_unity "EnemySound" false>> 
 
     Narrator: Congratulations player
 
