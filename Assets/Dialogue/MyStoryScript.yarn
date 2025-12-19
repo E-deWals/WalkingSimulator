@@ -154,6 +154,7 @@ You: I won't hurt you no worries
     Fox: Can i go with you? You seem like a nice person!
     ->Of course!
         Narrator: The fox will now follow you!
+        <<set_enabled_in_unity "FoxWalk" true>>
         <<if has_item ("Player", "clinkClank")>>
             <<set $quest = "Find last part with Fox">>
         <<elseif has_item ("Player", "desicleDemo")>>
