@@ -51,6 +51,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -121,3 +124,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longPressDuration: 1
   targetPlayerActivatable: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
