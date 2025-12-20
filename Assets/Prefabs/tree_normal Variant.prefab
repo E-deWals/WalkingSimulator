@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5, y: 10, z: 1.5}
-  m_Center: {x: -0.04, y: 4.5, z: 0.15}
+  m_Size: {x: 1.5, y: 7.546709, z: 1.5}
+  m_Center: {x: -0.040000025, y: 3.2733548, z: 0.15000004}
 --- !u!114 &6356466909753802734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ PrefabInstance:
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.3
+      value: -14.709345
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
@@ -159,12 +159,12 @@ PrefabInstance:
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.02
+      value: 5.9536533
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.91691625
+      value: -0.9995165
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
@@ -174,7 +174,7 @@ PrefabInstance:
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.3990798
+      value: 0.031093657
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
@@ -189,7 +189,7 @@ PrefabInstance:
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 312.95898
+      value: 356.436
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
@@ -240,7 +240,7 @@ Animator:
   m_GameObject: {fileID: 6344566317343326086}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 04a949c151bfce5419768aea20ee5abf, type: 2}
+  m_Controller: {fileID: 9100000, guid: 95777b61f23890a4c9f70afb1e961462, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -275,9 +275,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b54f960dbbf59924fb7c44d2cf9d8ddd, type: 3}
+  m_Resource: {fileID: 8300000, guid: c1b5a2df98700504093bbff1af1dbfcc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -5,21 +5,20 @@ title: Start
 
 Narrator: You wake up after a long nights rest
 Narrator: You remember there was something you had to do. Just not what
-Narrator: you see a note on the table 
 
 ===
 title: note
 ---
 The note: reminder to self: go pick flowers tomorrow
-Narrator: you decide to head out and go pick some flowers on the field to the left of your house
+Narrator: you decide to head out and go pick some flowers on the field
 <<set $quest = "Go to the flower field">>
 ===
 title: CometCrash
 ---
 
 Narrator: You see a comet falling down the sky and decide to check it out
-Narrator: the comet is to the right of the flower field
 <<set $quest = "Check out the crash">>
+
 ===
 
 title: seeAlien

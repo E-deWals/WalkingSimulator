@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5, y: 10, z: 1.5}
-  m_Center: {x: 0, y: 4.5, z: 0}
+  m_Size: {x: 1.5, y: 6.718947, z: 1.5}
+  m_Center: {x: 0, y: 2.859473, z: 0}
 --- !u!114 &6280006690046133826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,32 +134,32 @@ PrefabInstance:
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3889
+      value: 1.5508742
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3889
+      value: 1.5508742
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3889
+      value: 1.5508742
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.87
+      value: -1.8119
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.818596
+      value: 25.796
       objectReference: {fileID: 0}
     - target: {fileID: 4377183326721852052, guid: 7d2bcbef65c72304ba687bdc3273dd0a,
         type: 3}
@@ -275,9 +275,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b54f960dbbf59924fb7c44d2cf9d8ddd, type: 3}
+  m_Resource: {fileID: 8300000, guid: c1b5a2df98700504093bbff1af1dbfcc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
